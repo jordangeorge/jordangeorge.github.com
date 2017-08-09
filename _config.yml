@@ -1,0 +1,40 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+# Setup
+title:            Jordan George
+description:      'Student software developer'
+baseurl:          ''
+
+# Assets
+pdfs:           '/pdf'
+
+author:
+  name:           'Jordan George'
+  url:            jordangeorge.github.io
+  email:          'jordanngeorge@gmail.com'
+  twitter:        'https://twitter.com/jordanngeorge'
+  linkedin:       'https://linkedin.com/in/jordanngeorge'
+  github:         'https://github.com/jordangeorge'
+
+github:
+  repo:           https://github.com/jordangeorge/jordangeorge.github.io
+
+paginate:         2
+
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+
+collections:
+  - projects
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

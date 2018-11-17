@@ -7,9 +7,10 @@ Working with a group on a Breaking Ground GIS responsive web application to gath
 We coordinate with the Breaking Ground team to specify their vision for the app.
 
 We are using the following frameworks/APIs/technology:
-- Node.js
+- [Node.js](https://nodejs.org/en/)
 - HTML5
 - CSS3
-- Bootstrap
+- [Materialize](https://materializecss.com/)
 - JavaScript
-- Google Maps API
+- [Google Maps API](https://developers.google.com/maps/documentation/)
+- SQL

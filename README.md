@@ -1,4 +1,4 @@
-# [jordangeorge.github.io](jordangeorge.github.io)
+# [jordangeorge.github.io](https://jordangeorge.github.io)
 
 Run `bundle install` to install missing gems.
 

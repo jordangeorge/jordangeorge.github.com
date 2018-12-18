@@ -13,9 +13,12 @@
     "url": "https://github.com/JordanGeorge/jordangeorge.github.io/issues"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.0",
     "morgan": "^1.9.1"
   }
 }

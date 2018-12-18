@@ -37,13 +37,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/post/:id', function(req, res) {
-  // find the Post with provided ID
-  Post.findById(req.params.id).populate("comments").exec(function(err, foundPost){
-      if(err){
+  Post.findById(req.params.id).populate("comments").exec(function(err, foundPost) {
+      if(err) {
           console.log(err);
       } else {
           console.log(foundPost)
-          //render show template with that Post
           res.render("post", {post: foundPost});
       }
   });
@@ -64,5 +62,5 @@ app.get('/talks', function(req, res) {
 // Listening
 var port = process.env.PORT || 8000
 app.listen(port, function () {
-  console.log('App listening on port '+ port +'!')
+  console.log('App listening on port '+ port)
 })

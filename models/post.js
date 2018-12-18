@@ -1,7 +1,6 @@
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose');
 
-var postSchema = new Schema({
+var postSchema = new mongoose.Schema({
   id: Schema.Types.ObjectId,
   title: String,
   content:String,

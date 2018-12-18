@@ -1,5 +1,5 @@
-var mongoose = require("mongoose");
-var Post = require("./models/post");
+var mongoose = require("mongoose"),
+    Post = require("./models/post");
 
 var data = [
     {

@@ -24,7 +24,7 @@ function container() {
   }
 
   function handleResponse(response) {
-    document.getElementById("content").innerHTML = "<div class=\"post\"><h1>" + response.title + "</h1>" + response.content + "</div>";
+    document.getElementById("post-content").innerHTML = "<div class=\"post\"><h1>" + response.title + "</h1>" + response.content + "</div>";
   }
 
   var client = new HttpClient();

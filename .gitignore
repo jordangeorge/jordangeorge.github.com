@@ -2,3 +2,4 @@
 node_modules
 /public/js/client_id.json
 /public/js/config.js
+/public/pdf

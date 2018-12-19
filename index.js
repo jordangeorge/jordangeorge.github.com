@@ -13,7 +13,6 @@ var express         = require('express'),
 // Express Configuration
 // Sets the connection to MongoDB
 var mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
-// var mongo_url = process.env.DATABASEURL
 // var mongo_url = "mongodb://localhost/jordangeorge";
 mongoose.connect(mongo_url, { useNewUrlParser: true });
 
@@ -26,61 +25,8 @@ app.use(morgan('dev')); // log with Morgan
 app.use(methodOverride("_method"));
 // seedDB(); // seed the local mongo database
 
-// Models
-var Post = require("./models/post");
-var Project = require("./models/project");
-var Talk = require("./models/talk");
-
-// Routes
-app.get('/', function(req, res) {
-  Post.find({}, function(err, allPosts) {
-    if (err) {
-      console.log(err);
-    } else {
-      allPosts = allPosts.sort(sort_by_date);
-      res.render("blog", {posts: allPosts, title: ""});
-    }
-  });
-});
-
-app.get('/post/:id', function(req, res) {
-  Post.findById(req.params.id).populate("comments").exec(function(err, foundPost) {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render("post", {post: foundPost, title: foundPost['title']});
-    }
-  });
-});
-
-app.get('/resume', function(req, res) {
-  res.render("resume", {title: "Resume"})
-});
-
-app.get('/projects', function(req, res) {
-  Project.find({}, function(err, allProjects) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render("projects", {projects: allProjects, title: "Projects"});
-    }
-  });
-});
-
-function sort_by_date(a, b) {
-  return new Date(b.date).getTime() - new Date(a.date).getTime();
-}
-
-app.get('/talks', function(req, res) {
-  Talk.find({}, function(err, allTalks) {
-    if (err) {
-      console.log(err);
-    } else {
-      allTalks = allTalks.sort(sort_by_date);
-      res.render("talks", {talks: allTalks, title: "Talks"});
-    }
-  });
-});
+var routes = require('./routes');
+app.use("/", routes);
 
 // Listening
 var port = process.env.PORT || 8000

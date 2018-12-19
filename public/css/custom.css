@@ -3,7 +3,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
-#blog-content, #post-content {
+#content {
   margin-left: 300px;
   margin-right: 300px;
 }

@@ -22,10 +22,14 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(morgan('dev')); // log with Morgan
 app.use(methodOverride("_method"));
-// seedDB(); // seed the database
+// seedDB(); // seed the local mongo database
+
+// Models
+var Post = require("./models/post");
+var Talk = require("./models/talk");
+var Project = require("./models/project");
 
 // Routes
-var Post = require("./models/post");
 app.get('/', function(req, res) {
   Post.find({}, function(err, allPosts) {
      if (err) {
@@ -52,11 +56,23 @@ app.get('/resume', function(req, res) {
 });
 
 app.get('/projects', function(req, res) {
-  res.render("projects")
+  Project.find({}, function(err, allProjects) {
+     if (err) {
+         console.log(err);
+     } else {
+        res.render("projects", {projects: allProjects});
+     }
+  });
 });
 
 app.get('/talks', function(req, res) {
-  res.render("talks")
+  Talk.find({}, function(err, allTalks) {
+     if (err) {
+         console.log(err);
+     } else {
+        res.render("talks", {talks: allTalks});
+     }
+  });
 });
 
 // Listening

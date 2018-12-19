@@ -1,3 +1,16 @@
 <% include ./partials/header %>
 
+<div id="content">
+  <% talks.forEach(function(talk) { %>
+    <div class="post">
+      <h1>
+        <%= talk.name %>
+      </h1>
+      <p>
+        <%= talk.description %>
+      </p>
+    </div>
+  <% }); %>
+</div>
+
 <% include ./partials/footer %>

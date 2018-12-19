@@ -1,10 +1,11 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
 
-var postSchema = new mongoose.Schema({
+var postSchema = new Schema({
   id: Schema.Types.ObjectId,
   title: String,
-  content:String,
-  published:String
+  content: String,
+  published: String
 });
 
 // Export the model

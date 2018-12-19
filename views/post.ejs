@@ -3,10 +3,18 @@
 <div id="content">
   <div class="post">
     <h1>
-      <%= post.title %>
+      <%= post["title"] %>
     </h1>
+    <h4>
+      <%=
+        new Date(post["published"]).toLocaleDateString(
+          "en-US",
+          {year: 'numeric', month: 'long', day: 'numeric'}
+        )
+      %>
+    </h4>
     <p>
-      <%= post.content %>
+      <%= post["content"] %>
     </p>
   </div>
 </div>

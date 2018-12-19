@@ -4,10 +4,18 @@
 
 <!-- navigation bar -->
 <ul class="navbar">
-  <li><a href="/">Blog</a></li>
-  <li><a href="./resume">Resume</a></li>
-  <li><a href="./projects">Projects</a></li>
-  <li><a href="./talks">Talks</a></li>
+  <li>
+    <a <% if (title.toLowerCase() == "") { %>class="active"<% } %> href="/">Blog</a>
+  </li>
+  <li>
+    <a <% if (title.toLowerCase() == "resume") { %>class="active"<% } %> href="/resume">Resume</a>
+  </li>
+  <li>
+    <a <% if (title.toLowerCase() == "projects") { %>class="active"<% } %> href="/projects">Projects</a>
+  </li>
+  <li>
+    <a <% if (title.toLowerCase() == "talks") { %>class="active"<% } %> href="/talks">Talks</a>
+  </li>
   <div class="dropdown">
     <button class="dropbtn">Contact</button>
     <div class="dropdown-content">

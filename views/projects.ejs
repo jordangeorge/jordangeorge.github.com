@@ -5,14 +5,14 @@
     <% projects.forEach(function(project) { %>
       <div class="post">
         <h1>
-          <%= project.name %>
+          <%= project["name"] %>
         </h1>
         <p>
-          <%= project.description %>
+          <%= project["description"] %>
         </p>
       </div>
     <% }); %>
-  <% } else {%>
+  <% } else { %>
     <h1 style="text-align: center">No projects to show.</h1>
   <% } %>
 </div>

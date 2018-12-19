@@ -1,18 +1,26 @@
 <% include ./partials/header %>
 
 <div id="content">
-  <% if (talks.length > 0){ %>
+  <% if (talks.length > 0) { %>
     <% talks.forEach(function(talk) { %>
       <div class="post">
         <h1>
-          <%= talk.name %>
+          <%= talk["name"] %>
         </h1>
+        <h4>
+          <%=
+            new Date(talk['date']).toLocaleDateString(
+              "en-US",
+              {year: 'numeric', month: 'long', day: 'numeric'}
+            )
+          %>
+        </h4>
         <p>
-          <%= talk.description %>
+          <%= talk["description"] %>
         </p>
       </div>
     <% }); %>
-  <% } else {%>
+  <% } else { %>
     <h1 style="text-align: center">No talks to show.</h1>
   <% } %>
 </div>

@@ -1,16 +1,20 @@
 <% include ./partials/header %>
 
 <div id="content">
-  <% projects.forEach(function(project) { %>
-    <div class="post">
-      <h1>
-        <%= project.name %>
-      </h1>
-      <p>
-        <%= project.description %>
-      </p>
-    </div>
-  <% }); %>
+  <% if (projects.length > 0) { %>
+    <% projects.forEach(function(project) { %>
+      <div class="post">
+        <h1>
+          <%= project.name %>
+        </h1>
+        <p>
+          <%= project.description %>
+        </p>
+      </div>
+    <% }); %>
+  <% } else {%>
+    <h1 style="text-align: center">No projects to show.</h1>
+  <% } %>
 </div>
 
 <% include ./partials/footer %>

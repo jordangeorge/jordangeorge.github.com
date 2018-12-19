@@ -1,16 +1,20 @@
 <% include ./partials/header %>
 
 <div id="content">
-  <% talks.forEach(function(talk) { %>
-    <div class="post">
-      <h1>
-        <%= talk.name %>
-      </h1>
-      <p>
-        <%= talk.description %>
-      </p>
-    </div>
-  <% }); %>
+  <% if (talks.length > 0){ %>
+    <% talks.forEach(function(talk) { %>
+      <div class="post">
+        <h1>
+          <%= talk.name %>
+        </h1>
+        <p>
+          <%= talk.description %>
+        </p>
+      </div>
+    <% }); %>
+  <% } else {%>
+    <h1 style="text-align: center">No talks to show.</h1>
+  <% } %>
 </div>
 
 <% include ./partials/footer %>

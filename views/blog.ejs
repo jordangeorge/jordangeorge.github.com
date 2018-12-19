@@ -2,16 +2,20 @@
 
 <!-- blog content -->
 <div id="content">
-  <% posts.forEach(function(post) { %>
-    <div class="post">
-      <h1>
-        <a href="/post/<%= post._id %>"><%= post.title %></a>
-      </h1>
-      <p>
-        <%= post.content.substring(0, 600) + "..." %>
-      </p>
-    </div>
-  <% }); %>
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(function(post) { %>
+      <div class="post">
+        <h1>
+          <a href="/post/<%= post._id %>"><%= post.title %></a>
+        </h1>
+        <p>
+          <%= post.content.substring(0, 600) + "..." %>
+        </p>
+      </div>
+    <% }); %>
+  <% } else {%>
+    <h1 style="text-align: center">No posts to show.</h1>
+  <% } %>
 </div>
 
 <% include ./partials/footer %>

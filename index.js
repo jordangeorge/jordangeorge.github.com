@@ -24,7 +24,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(morgan('dev')); // log with Morgan
 app.use(methodOverride("_method"));
-seedDB(); // seed the local mongo database
+// seedDB(); // seed the local mongo database
 
 // Models
 var Post = require("./models/post");

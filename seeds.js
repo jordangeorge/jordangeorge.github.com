@@ -24,7 +24,7 @@ var projectData = [
     "description": "An application to tell people where they can park based on their pass or lack thereof."
   }
 ]
-var talkData = [
+var talkData = [ // notice that this data is not in order
   {
     "name": "How to Swift",
     "date": "2018-12-02T08:41:00-08:00",

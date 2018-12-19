@@ -12,9 +12,9 @@ var express         = require('express'),
 
 // Express Configuration
 // Sets the connection to MongoDB
-// var mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
+var mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
 // var mongo_url = process.env.DATABASEURL
-var mongo_url = "mongodb://localhost/jordangeorge";
+// var mongo_url = "mongodb://localhost/jordangeorge";
 mongoose.connect(mongo_url, { useNewUrlParser: true });
 
 // Logging and parsing

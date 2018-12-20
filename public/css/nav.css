@@ -1,0 +1,121 @@
+/* nav */
+nav {
+  padding-bottom: 20px;
+}
+nav ul {
+  list-style: none;
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  color: #aaa;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* underline; hover animation */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+nav.underline ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.underline ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.underline ul li a:hover:after {
+  width: 100%;
+}
+nav.fill ul li a {
+  transition: all 2s;
+}
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+nav ul li a.active {
+  color: #555;
+}
+
+/* drop down */
+.dropdown {
+  /* float: left; */
+  /* overflow: hidden; */
+  display: inline-block;
+  text-align: center;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #aaa;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 88px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: #555;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropbtn:hover {
+  color: #555;
+}
+
+/* logo/name */
+#logo {
+  float: left;
+  color: #555;
+  padding: 14px 0px;
+  font-weight: 600;
+  font-size: 20px;
+}

@@ -25,11 +25,12 @@ app.use(morgan('dev')); // log with Morgan
 app.use(methodOverride("_method"));
 // seedDB(); // seed the local mongo database
 
+// Routes
 var routes = require('./routes');
 app.use("/", routes);
 
 // Listening
 var port = process.env.PORT || 8000
 app.listen(port, function () {
-  console.log('App listening on port '+ port)
+  console.log('App listening on port ' + port + '. Go to http://localhost:' + port + ".")
 })

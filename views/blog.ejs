@@ -6,7 +6,7 @@
     <% posts.forEach(function(post) { %>
       <div class="post">
         <h1>
-          <a href="/post/<%= post["_id"] %>"><%= post["title"] %></a>
+          <a href="/post/<%= post["_id"] %>"><%= post["title"].toLowerCase() %></a>
         </h1>
         <h4>
           <%=

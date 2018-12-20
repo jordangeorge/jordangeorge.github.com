@@ -12,23 +12,24 @@ router.get('/', function(req, res) {
       console.log(err);
     } else {
       allPosts = allPosts.sort(sort_by_date);
-      res.render("blog", {posts: allPosts, title: ""});
+      res.render("blog", {posts: allPosts, title: "", flag: true});
     }
   });
 });
 
 router.get('/post/:id', function(req, res) {
-  Post.findById(req.params.id).populate("comments").exec(function(err, foundPost) {
+  Post.findById(req.params.id).exec(function(err, foundPost) {
     if(err) {
       console.log(err);
     } else {
-      res.render("post", {post: foundPost, title: foundPost['title']});
+      var title = foundPost["title"].toLowerCase();
+      res.render("post", {post: foundPost, title: title, flag: true});
     }
   });
 });
 
 router.get('/resume', function(req, res) {
-  res.render("resume", {title: "Resume"})
+  res.render("resume", {title: "Resume", flag: false})
 });
 
 router.get('/projects', function(req, res) {
@@ -36,7 +37,7 @@ router.get('/projects', function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render("projects", {projects: allProjects, title: "Projects"});
+      res.render("projects", {projects: allProjects, title: "Projects", flag: false});
     }
   });
 });
@@ -47,7 +48,7 @@ router.get('/talks', function(req, res) {
       console.log(err);
     } else {
       allTalks = allTalks.sort(sort_by_date);
-      res.render("talks", {talks: allTalks, title: "Talks"});
+      res.render("talks", {talks: allTalks, title: "Talks", flag: false});
     }
   });
 });

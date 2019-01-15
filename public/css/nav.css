@@ -110,12 +110,3 @@ nav ul li a.active {
 .dropbtn:hover {
   color: #555;
 }
-
-/* logo/name */
-#logo {
-  float: left;
-  color: #555;
-  padding: 14px 0px;
-  font-weight: 600;
-  font-size: 20px;
-}

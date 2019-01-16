@@ -35,3 +35,17 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+
+<div class="newsletter-container">
+  <div class="close-button" onclick="closeNewsletter()">
+    <i class="fas fa-times"></i>
+  </div>
+
+  <form class="newsletter-form" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=JordanGeorge', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+    <p class="newsletter-text">Get new posts to your inbox</p>
+    <input type="hidden" value="JordanGeorge" name="uri"/>
+    <input type="hidden" name="loc" value="en_US"/>
+    <input class="newsletter-email" type="text" name="email" placeholder="name@example.com" />
+    <input class="newsletter-submit" type="submit" value="Subscribe" />
+  </form>
+</div>

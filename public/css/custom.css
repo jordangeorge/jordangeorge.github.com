@@ -48,3 +48,11 @@
   /* margin-right: 15px; */
   /* margin-top: 15px; */
 }
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.title a:hover {
+  text-decoration: none;
+}

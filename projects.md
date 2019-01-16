@@ -11,7 +11,7 @@ title: Projects
         {{ project.title }}
       </a>
     </h2>
-    
+
     {{ project.content }}
 
   </div>

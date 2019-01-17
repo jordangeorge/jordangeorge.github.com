@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Projects (not publicly on github)
 ---
 
 <div class="projects">
@@ -11,9 +11,7 @@ title: Projects
         {{ project.title }}
       </a>
     </h2>
-
     {{ project.content }}
-
   </div>
   {% endfor %}
 </div>

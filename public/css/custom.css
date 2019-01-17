@@ -1,3 +1,4 @@
+/* resume.html */
 .pdf-container {
   height: 0;
   width: 100%;
@@ -5,7 +6,6 @@
   overflow: hidden;
   position: relative;
 }
-
 .pdf-container object {
   width: 100%;
   height: 100%;
@@ -14,6 +14,7 @@
   left: 0;
 }
 
+/* sidebar.html */
 .inline-social-btns {
   padding-left: 0;
   list-style: none;
@@ -22,6 +23,7 @@
   justify-content: space-between;
 }
 
+/* index.html */
 .newsletter-container {
   z-index: 99999;
   background-color: #000;
@@ -39,20 +41,27 @@
   opacity: 0.5;
   visibility: hidden;
 }
-
 .close-button {
   top: 0%;
   right: 0%;
-  /* position: absolute; */
-  /* margin: 15px; */
-  /* margin-right: 15px; */
-  /* margin-top: 15px; */
 }
 
+/* disqus.html */
 #disqus_thread {
   margin-top: 30px;
 }
 
+/* head.html */
 .title a:hover {
   text-decoration: none;
+}
+
+/* upark.md */
+.img-div {
+  display: flex;
+}
+.images {
+  width: 30%;
+  margin: 0 auto;
+  display: inline-block;
 }

@@ -15,31 +15,14 @@
     </nav>
 
     <ul class="inline-social-btns">
+      {% assign links = site.data.nav_links %}
+      {% for link in links %}
         <li>
-            <a href="mailto:{{ site.author.email }}" title="E-Mail link">
-                <i class="fas fa-at fa-2x"></i>
-            </a>
+          <a href="{{ link.url }}" target="_blank" title="{{ link.name }} link">
+            <i class="{{ link.fa_icon }} fa-2x"></i>
+          </a>
         </li>
-        <li>
-            <a href="{{ site.author.github }}" target="_blank" title="Github link">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-        </li>
-        <li>
-            <a href="{{ site.author.linkedin }}" target="_blank" title="LinkedIn link">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-        </li>
-        <li>
-            <a href="{{ site.author.medium }}" target="_blank" title="Medium link">
-                <i class="fab fa-medium-m fa-2x"></i>
-            </a>
-        </li>
-        <li>
-            <a href="{{ site.author.angellist }}" target="_blank" title="Medium link">
-                <i class="fab fa-angellist fa-2x"></i>
-            </a>
-        </li>
+      {% endfor %}
     </ul>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>

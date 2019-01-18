@@ -1,31 +1,27 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      rouge
+# markdown:             kramdown
+# highlighter:          rouge
+
+# github:
+  # repo:               https://github.com/jordangeorge/jordangeorge.github.io
 
 # Permalinks
-permalink:            pretty
-relative_permalinks:  false
+# permalink:            pretty
+# relative_permalinks:  false
 
 # Setup
-title:            Jordan George
-description:      'Undergraduate software developer'
-baseurl:          ''
-
-# Assets
-pdfs:             '/pdf'
+title:                Jordan George
+description:          'Undergraduate software developer'
+baseurl:              ''
+favicon:              /public/images/favicon.ico
 
 author:
-  name:           'Jordan George'
-  url:            jordangeorge.github.io
+  name:               'Jordan George'
+  url:                jordangeorge.github.io
 
-github:
-  repo:           https://github.com/jordangeorge/jordangeorge.github.io
+paginate:             5
 
-# Pagination
-paginate:         5
-
-# Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-feed
 

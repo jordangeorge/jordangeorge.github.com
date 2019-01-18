@@ -1,7 +1,3 @@
-- name: Email
-  url: mailto:jordanngeorge@gmail.com
-  fa_icon: fas fa-at
-
 - name: GitHub
   url: https://github.com/jordangeorge
   fa_icon: fab fa-github
@@ -13,6 +9,10 @@
 - name: Medium
   url: https://medium.com/@JordanGeorge
   fa_icon: fab fa-medium-m
+
+- name: Email
+  url: mailto:jordanngeorge@gmail.com
+  fa_icon: fas fa-at
 
 - name: AngelList
   url: https://angel.co/jordangeorge

@@ -1,7 +1,7 @@
 {% assign tags = include.tags | split:'|' | sort | uniq %}
 
 {% if tags.size > 0 %}
-    <div>
+    <div class="tag-list">
       <i class="fa fa-tag fa-fw"></i>
 
       {% if tags.size == 1 %}
@@ -15,3 +15,5 @@
       {% endfor %}
     </div>
 {% endif %}
+
+<!-- FIXME: first tag has an extra space on post.html but not tags.html -->

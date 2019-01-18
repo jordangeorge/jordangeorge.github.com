@@ -65,3 +65,14 @@
   margin: 0 auto;
   display: inline-block;
 }
+
+/* post.html */
+.post {
+  margin-bottom: 30px;
+}
+
+/* FIXME: conflicted */
+/* page.html */
+.page-title {
+  margin-bottom: 30px;
+}

@@ -2,8 +2,8 @@
 # markdown:             kramdown
 # highlighter:          rouge
 
-# github:
-  # repo:               https://github.com/jordangeorge/jordangeorge.github.io
+github:
+  repo:               https://github.com/jordangeorge/jordangeorge.github.io
 
 # Permalinks
 # permalink:            pretty

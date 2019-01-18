@@ -1,13 +1,12 @@
 # Dependencies
-# markdown:             kramdown
-# highlighter:          rouge
+markdown:             kramdown
+highlighter:          rouge
 
-github:
-  repo:               https://github.com/jordangeorge/jordangeorge.github.io
+# github:
+#   repo:               https://github.com/jordangeorge/jordangeorge.github.io
 
 # Permalinks
-# permalink:            pretty
-# relative_permalinks:  false
+permalink:            pretty
 
 # Setup
 title:                Jordan George

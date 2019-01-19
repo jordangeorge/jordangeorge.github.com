@@ -6,7 +6,7 @@ highlighter:          rouge
 #   repo:               https://github.com/jordangeorge/jordangeorge.github.io
 
 # Permalinks
-permalink:            pretty
+permalink:            /blog/:slug
 
 # Setup
 title:                Jordan George
@@ -22,7 +22,7 @@ paginate:             5
 
 plugins:
   - jekyll-paginate
-  - jekyll-feed
+  # - jekyll-feed
 
 collections:
   - projects

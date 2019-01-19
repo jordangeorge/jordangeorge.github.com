@@ -5,6 +5,11 @@ title: Resume
 
 <div class="pdf-container">
   <object data="{{ site.baseurl }}/public/pdf/Jordan George Resume.pdf" type="application/pdf">
-    <p>It appears you don't have a PDF plugin for this browser. <a href="{{ site.baseurl }}/public/pdf/Jordan George Resume.pdf">Click here to download the PDF file.</a></p>
+    <p>It appears you don't have a PDF plugin for this browser. Download the file below.</p>
   </object>
+</div>
+
+<div class="" style="margin-top: 30px;">
+  <p><a href="{{ site.baseurl }}/public/pdf/Jordan George Resume.pdf" download>Download resume</a></p>
+  <p><a href="{{ site.baseurl }}/public/pdf/Jordan George Resume.pdf" target="_blank">Open resume in new page</a></p>
 </div>

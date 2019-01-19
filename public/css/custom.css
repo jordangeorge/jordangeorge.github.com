@@ -24,7 +24,7 @@
 }
 
 /* index.html */
-.newsletter-container {
+/* .newsletter-container {
   z-index: 99999;
   background-color: #000;
   border: none;
@@ -44,7 +44,7 @@
 .close-button {
   top: 0%;
   right: 0%;
-}
+} */
 
 /* disqus.html */
 #disqus_thread {

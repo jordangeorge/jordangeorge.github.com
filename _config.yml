@@ -1,14 +1,8 @@
-# Dependencies
 markdown:             kramdown
 highlighter:          rouge
 
-# github:
-#   repo:               https://github.com/jordangeorge/jordangeorge.github.io
+permalink:            /blog/:title
 
-# Permalinks
-permalink:            /blog/:slug
-
-# Setup
 title:                Jordan George
 description:          'Undergraduate software developer'
 baseurl:              ''
@@ -22,7 +16,6 @@ paginate:             5
 
 plugins:
   - jekyll-paginate
-  # - jekyll-feed
 
 collections:
   - projects

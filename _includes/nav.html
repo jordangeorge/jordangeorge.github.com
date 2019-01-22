@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li><a class="{% if page.url contains 'blog' %}active{%endif%}" href="{{ site.baseurl }}/blog/">Blog</a></li>
+    <li><a class="{% if page.url contains 'archive' %}active{%endif%}" href="{{ site.baseurl }}/archive/">Archive</a></li>
+    <li><a class="{% if page.url contains 'projects' %}active{%endif%}" href="{{ site.baseurl }}/projects/">Projects</a></li>
+    <li><a class="{% if page.url contains 'resume' %}active{%endif%}" href="{{ site.baseurl }}/resume/">Resume</a></li>
+    <li><a class="{% if page.url contains 'life' %}active{%endif%}" href="{{ site.baseurl }}/life/">Life</a></li>
+  </ul>
+</nav>

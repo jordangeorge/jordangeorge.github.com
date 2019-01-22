@@ -8,9 +8,9 @@ layout: page
   {% assign rawtags = rawtags | append:post_tags %}
 {% endfor %}
 
-<hr>
+
 {% include tag_list.html tags=rawtags %}
-<hr>
+
 
 <div>
   {% for tag in tags %}

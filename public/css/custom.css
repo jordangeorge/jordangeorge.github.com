@@ -1,3 +1,80 @@
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: 'PT Sans', sans-serif;
+}
+
+nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav ul {
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  color: #a0a0a0;
+}
+nav a:visited {
+  color: #a0a0a0;
+}
+nav a.active {
+  color: #111;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+
+.social-media-links {
+  margin-top: 100px;
+  width: 400px;
+}
+.inline-social-btns {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+ul.inline-social-btns li a {
+  color: #444;
+}
+ul.inline-social-btns li a:visited i{
+  color: #444;
+}
+
+
+.name {
+  color: 444;
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+.name a:visited {
+  color: #444;
+}
+
+.content {
+  color: 444;
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+
+
 /* resume.html */
 .pdf-container {
   height: 0;
@@ -12,67 +89,4 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-
-/* sidebar.html */
-.inline-social-btns {
-  padding-left: 0;
-  list-style: none;
-  margin-left: -5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* index.html */
-/* .newsletter-container {
-  z-index: 99999;
-  background-color: #000;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  padding: 20px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  opacity: 0.5;
-  visibility: hidden;
-}
-.close-button {
-  top: 0%;
-  right: 0%;
-} */
-
-/* disqus.html */
-#disqus_thread {
-  margin-top: 30px;
-}
-
-/* head.html */
-.title a:hover {
-  text-decoration: none;
-}
-
-/* upark.md */
-.img-div {
-  display: flex;
-}
-.images {
-  width: 30%;
-  margin: 0 auto;
-  display: inline-block;
-}
-
-/* post.html */
-.post {
-  margin-bottom: 30px;
-}
-
-/* FIXME: conflicted */
-/* page.html */
-.page-title {
-  margin-bottom: 30px;
 }

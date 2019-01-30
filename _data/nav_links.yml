@@ -1,19 +1,29 @@
 - name: GitHub
   url: https://github.com/jordangeorge
   fa_icon: fab fa-github
+  new_tab: true
 
 - name: LinkedIn
   url: https://linkedin.com/in/jordanngeorge
   fa_icon: fab fa-linkedin
+  new_tab: true
 
 - name: Medium
   url: https://medium.com/@JordanGeorge
   fa_icon: fab fa-medium-m
+  new_tab: true
 
 - name: Email
   url: mailto:jordanngeorge@gmail.com
   fa_icon: fas fa-at
+  new_tab: false
 
 - name: AngelList
   url: https://angel.co/jordangeorge
   fa_icon: fab fa-angellist
+  new_tab: true
+
+- name: Resume
+  url: /public/pdf/Jordan%20George%20Resume.pdf
+  fa_icon: far fa-file-alt
+  new_tab: true

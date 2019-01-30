@@ -1,6 +1,8 @@
 markdown:             kramdown
 highlighter:          rouge
 
+url:                  "https://jordangeorge.github.io/"
+
 permalink:            /blog/:title
 
 title:                Jordan George
@@ -12,7 +14,8 @@ author:
   name:               'Jordan George'
   url:                jordangeorge.github.io
 
-paginate:             5
+paginate:             3
+paginate_path:        blog/page:num
 
 plugins:
   - jekyll-paginate

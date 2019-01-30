@@ -1,9 +1,7 @@
 {% assign tags = include.tags | split:'|' | sort | uniq %}
 
 {% if tags.size > 0 %}
-    <div class="tag-list">
-      <i class="fa fa-tag fa-fw"></i>
-
+    <div>
       {% if tags.size == 1 %}
         Tag:
       {% elsif tags.size > 1 %}
@@ -11,7 +9,7 @@
       {% endif %}
 
       {% for tag in tags %}
-        <a href="{{site.baseurl}}/tags#{{tag | url_encode}}">#{{ tag }}</a>
+        <a href="{{ site.baseurl }}/tags#{{ tag | url_encode }}">#{{ tag }}</a>
       {% endfor %}
     </div>
 {% endif %}

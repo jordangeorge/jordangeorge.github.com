@@ -11,9 +11,7 @@
       {% endif %}
 
       {% for tag in tags %}
-        <a href="{{site.baseurl}}/tags#{{tag | url_encode}}">#{{ tag }}</a>
+        <a href="{{ site.baseurl }}/tags#{{ tag | url_encode }}">#{{ tag }}</a>
       {% endfor %}
     </div>
 {% endif %}
-
-<!-- FIXME: first tag has an extra space on post.html but not tags.html -->

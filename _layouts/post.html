@@ -11,13 +11,13 @@ layout: default
   {{ content }}
 
   {% if page.img %}
-    <img src="/public/images/blog/{{page.img}}" alt="" width="500" style="margin: 0 auto;">
+    <img src="/public/images/blog/{{ page.img }}" alt="{{ page.title }}">
   {% endif %}
 
 </div>
 
 {% capture tag_list %}
-  {{ page.tags | join: "|"}}
+  {{ page.tags | join: "|" }}
 {% endcapture %}
 {% include tag_list.html tags=tag_list %}
 

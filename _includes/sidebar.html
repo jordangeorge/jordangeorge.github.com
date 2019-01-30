@@ -8,14 +8,14 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item {% if page.url == '/' %}active{%endif%}" href="{{ site.baseurl }}/">Blog</a>
-      <a class="sidebar-nav-item {% if page.url contains 'archive' %}active{%endif%}" href="{{ site.baseurl }}/archive/">Archive</a>
-      <a class="sidebar-nav-item {% if page.url contains 'projects' %}active{%endif%}" href="{{ site.baseurl }}/projects/">Projects</a>
-      <a class="sidebar-nav-item {% if page.url contains 'resume' %}active{%endif%}" href="{{ site.baseurl }}/resume/">Resume</a>
+      {% assign links = site.data.links %}
+      {% for link in links %}
+        <a class="sidebar-nav-item {% if page.url contains link.name %}active{% endif %}" href="{{ site.baseurl }}/{{ link.url }}">{{ link.name }}</a>
+      {% endfor %}
     </nav>
 
     <ul class="inline-social-btns">
-      {% assign links = site.data.nav_links %}
+      {% assign links = site.data.social-media-links %}
       {% for link in links %}
         <li>
           <a href="{{ link.url }}" target="_blank" title="{{ link.name }} link">

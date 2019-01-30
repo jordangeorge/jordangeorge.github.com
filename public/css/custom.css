@@ -13,6 +13,9 @@
   top: 0;
   left: 0;
 }
+.resume-new-tab {
+  margin-top: 30px;
+}
 
 /* sidebar.html */
 .inline-social-btns {
@@ -60,7 +63,7 @@
 .img-div {
   display: flex;
 }
-.images {
+.img-div div {
   width: 30%;
   margin: 0 auto;
   display: inline-block;
@@ -70,8 +73,13 @@
 .post {
   margin-bottom: 30px;
 }
+.post img {
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
 
-/* FIXME: conflicted */
+/* FIXME: conflicted on whether I want or not */
 /* page.html */
 .page-title {
   margin-bottom: 30px;

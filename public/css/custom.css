@@ -114,7 +114,7 @@ ul.inline-social-btns li a:visited i {
 .img-div {
 	display: flex;
 }
-.image img {
+.img-div div img {
 	width: 100%;
 }
 

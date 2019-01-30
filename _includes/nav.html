@@ -1,8 +1,12 @@
 <nav>
   <ul>
-    <!-- <li><a class="{% if page.url contains 'blog' %}active{%endif%}" href="{{ site.baseurl }}/blog/">Blog</a></li> -->
-    <li><a class="{% if page.url contains 'archive' %}active{%endif%}" href="{{ site.baseurl }}/archive">Archive</a></li>
-    <li><a class="{% if page.url contains 'projects' %}active{%endif%}" href="{{ site.baseurl }}/projects">Projects</a></li>
-    <li><a class="{% if page.url contains 'life' %}active{%endif%}" href="{{ site.baseurl }}/life">Life</a></li>
+    {% assign links = site.data.links %}
+    {% for link in links %}
+      <li>
+        <a class="{% if page.url contains link.url %}active{% elsif page.layout == 'post' and link.url contains 'archive' %}active{% endif %}" href="{{ site.baseurl }}/{{ link.url }}">
+          {{ link.name }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </nav>

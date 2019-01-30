@@ -8,7 +8,7 @@ We are currently looking into getting this app on the App Store.
 
 <!-- FIXME: better images -->
 <div class="img-div">
-  <div class="image"><img src="/public/images/upark/launch.png" alt="upark launch screen image"></div>
-  <div class="image"><img src="/public/images/upark/pass.png" alt="upark pass image"></div>
-  <div class="image"><img src="/public/images/upark/map.png" alt="upark map image"></div>
+  <div><img src="/public/images/upark/launch.png" alt="upark launch screen image"></div>
+  <div><img src="/public/images/upark/pass.png" alt="upark pass image"></div>
+  <div><img src="/public/images/upark/map.png" alt="upark map image"></div>
 </div>

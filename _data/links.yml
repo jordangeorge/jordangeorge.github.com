@@ -1,0 +1,11 @@
+# - name: Blog
+#   url: blog
+
+- name: Archive
+  url: archive
+
+- name: Projects
+  url: projects
+
+- name: Life
+  url: life

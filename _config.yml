@@ -2,14 +2,10 @@
 markdown:             kramdown
 highlighter:          rouge
 
-url: "https://jordangeorge.github.io/"
-# github:
-#   repo:               https://github.com/jordangeorge/jordangeorge.github.io
+url:                  "https://jordangeorge.github.io/"
 
-# Permalinks
-# permalink:            pretty
+permalink:            /blog/:title
 
-# Setup
 title:                Jordan George
 description:          'Undergraduate software developer'
 baseurl:              ''
@@ -19,14 +15,11 @@ author:
   name:               'Jordan George'
   url:                jordangeorge.github.io
 
-paginate:             5
-paginate_path: "blog/page:num"
-permalink: /blog/:title
+paginate:             3
+paginate_path:        blog/page:num
 
 plugins:
-  - jekyll
   - jekyll-paginate
-  # - jekyll-feed
 
 collections:
   - projects

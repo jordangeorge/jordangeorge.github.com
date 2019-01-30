@@ -15,4 +15,4 @@ We are using the following frameworks/APIs/technology:
 - [Google Maps API](https://developers.google.com/maps/documentation/)
 - SQL
 
-[UK CS News Story](https://www.engr.uky.edu/news/2018/08/computer-science-students-develop-app-benefit-homeless-outreach)
+<a href="https://www.engr.uky.edu/news/2018/08/computer-science-students-develop-app-benefit-homeless-outreach" target="_blank">UK CS News Story</a>

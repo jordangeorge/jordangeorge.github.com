@@ -3,7 +3,9 @@
   <!-- Enable responsiveness on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  {% if page.layout == 'post' %}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon }}">
+
+  {% if page.layout == "post" %}
     <!-- Meta properties for blog posts -->
     {% capture title %}
         {{ page.title }} &middot; {{ site.author.name }}
@@ -35,13 +37,14 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
   <!-- JS -->
-  <script src="{{ site.baseurl }}/public/js/custom.js"></script>
+  {% if page.title == "Life" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/magnific-popup.css">
+  {% endif %}
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon }}">
 </head>

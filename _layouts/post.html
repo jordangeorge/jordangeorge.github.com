@@ -4,21 +4,23 @@ layout: default
 
 <div class="post">
 
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
 
-  <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+  {{ page.date | date: "%B %-d, %Y" }}
 
   {{ content }}
 
   {% if page.img %}
-    <img src="/public/images/blog/{{page.img}}" alt="" width="500" style="margin: 0 auto;">
+    <img src="/public/images/blog/{{ page.img }}" alt="{{ page.title }} image">
   {% endif %}
 
+
+  {% capture tag_list %}
+    {{ page.tags | join: "|"}}
+  {% endcapture %}
+  {% include tag_list.html tags=tag_list %}
+
+  {% include disqus.html %}
+
+
 </div>
-
-{% capture tag_list %}
-  {{ page.tags | join: "|"}}
-{% endcapture %}
-{% include tag_list.html tags=tag_list %}
-
-{% include disqus.html %}

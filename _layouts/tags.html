@@ -8,23 +8,23 @@ layout: page
   {% assign rawtags = rawtags | append:post_tags %}
 {% endfor %}
 
+<div class="tags">
+  {% include tag_list.html tags=rawtags %}
 
-{% include tag_list.html tags=rawtags %}
+  <div>
+    {% for tag in tags %}
+      <h3 id="{{ tag | cgi_escape }}">
+          <a href="#{{ tag | cgi_escape }}">{{ tag }}</a>
+      </h3>
 
-
-<div>
-  {% for tag in tags %}
-    <h3 id="{{ tag | cgi_escape }}">
-        <a href="#{{ tag | cgi_escape }}">{{ tag }}</a>
-    </h3>
-
-    <ul>
-      {% for post in site.posts %}
-        {% if post.tags contains tag %}
-        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          &middot {{ post.date | date: "%B %-d, %Y" }}</li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  {% endfor %}
+      <ul>
+        {% for post in site.posts %}
+          {% if post.tags contains tag %}
+          <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            &middot {{ post.date | date: "%B %-d, %Y" }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
 </div>

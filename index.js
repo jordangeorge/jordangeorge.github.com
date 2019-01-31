@@ -19,7 +19,7 @@ if (port == 8000) { // dev
   app.use(morgan('dev')); // log with Morgan
   seedDB(); // seed the local mongo database
 } else { // start
-  mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
+  mongo_url = process.env.DATABASEURL;
 }
 mongoose.connect(mongo_url, { useNewUrlParser: true });
 
@@ -35,6 +35,5 @@ var routes = require('./routes');
 app.use("/", routes);
 
 // Listening
-app.listen(port, function () {
-  console.log('App listening on port ' + port + '. Go to http://localhost:' + port + ".")
-})
+var port_number = server.listen(process.env.PORT || 8000);
+app.listen(port_number);

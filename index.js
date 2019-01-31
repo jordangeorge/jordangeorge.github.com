@@ -12,15 +12,7 @@ var seedDB = require("./seeds");
 var port = process.env.PORT || 8000;
 
 // Sets the connection to MongoDB
-var mongo_url = ""
-if (port == 8000) { // dev
-  mongo_url = "mongodb://localhost/jordangeorge";
-  var morgan = require("morgan");
-  app.use(morgan('dev')); // log with Morgan
-  seedDB(); // seed the local mongo database
-} else { // start
-  mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
-}
+var mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
 mongoose.connect(mongo_url, { useNewUrlParser: true });
 
 // More app setup

@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<div class="archive">
+  <ul>
+    <% if (posts.length > 0) { %>
+      <% posts.forEach(function(post) { %>
+        <li>
+          <a href="/blog/<%= post["_id"] %>">
+            <%= post["title"].toLowerCase() %> (<%=new Date(post["published"]).toLocaleDateString("en-US", {year: 'numeric', month: 'long', day: 'numeric'}) %>)
+          </a>
+        </li>
+      <% }); %>
+  </ul>
+  <% } else { %>
+    <h1 style="text-align: center">No posts to show.</h1>
+  <% } %>
+</div>
+
+<% include ./partials/footer %>

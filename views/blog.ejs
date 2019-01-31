@@ -1,29 +1,26 @@
 <% include ./partials/header %>
 
-<!-- blog content -->
-<div id="content">
-  <% if (posts.length > 0) { %>
-    <% posts.forEach(function(post) { %>
-      <div class="post">
-        <h1>
-          <a href="/post/<%= post["_id"] %>"><%= post["title"].toLowerCase() %></a>
-        </h1>
-        <h4>
-          <%=
-          new Date(post["published"]).toLocaleDateString(
-          "en-US",
-          {year: 'numeric', month: 'long', day: 'numeric'}
-          )
-          %>
-        </h4>
-        <p>
-          <%= post["content"].substring(0, 600) + "..." %>
-        </p>
-      </div>
-    <% }); %>
-  <% } else { %>
-    <h1 style="text-align: center">No posts to show.</h1>
-  <% } %>
-</div>
+<% if (posts.length > 0) { %>
+  <% posts.forEach(function(post) { %>
+    <div class="post">
+      <h1>
+        <a href="/blog/<%= post["_id"] %>"><%= post["title"].toLowerCase() %></a>
+      </h1>
+      <h4>
+        <%=
+        new Date(post["published"]).toLocaleDateString(
+        "en-US",
+        {year: 'numeric', month: 'long', day: 'numeric'}
+        )
+        %>
+      </h4>
+      <p>
+        <%- post["content"].substring(0, 300) + "..." %>
+      </p>
+    </div>
+  <% }); %>
+<% } else { %>
+  <h1 style="text-align: center">No posts to show.</h1>
+<% } %>
 
 <% include ./partials/footer %>

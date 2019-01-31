@@ -1,14 +1,14 @@
 <% include ./partials/header %>
 
-<div id="content">
+<div class="projects">
   <% if (projects.length > 0) { %>
     <% projects.forEach(function(project) { %>
-      <div class="post">
+      <div>
         <h1>
           <%= project["name"] %>
         </h1>
         <p>
-          <%= project["description"] %>
+          <%- project["description"] %>
         </p>
       </div>
     <% }); %>

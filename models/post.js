@@ -5,7 +5,8 @@ var postSchema = new Schema({
   id: Schema.Types.ObjectId,
   title: String,
   content: String,
-  published: String
+  published: String,
+  img_name: String,
 });
 
 // Export the model

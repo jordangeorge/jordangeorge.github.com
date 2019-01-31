@@ -6,15 +6,16 @@ var express         = require('express'),
     app             = express(),
     mongoose        = require("mongoose"), // allows communication between mongodb and express
     bodyParser      = require("body-parser"), // pull information from HTML POST
-    morgan          = require("morgan"),
-    methodOverride  = require("method-override"),
-    seedDB          = require("./seeds"),
-    port            = process.env.PORT || 8000;
+    methodOverride  = require("method-override");
+
+var seedDB = require("./seeds");
+var port = process.env.PORT || 8000;
 
 // Sets the connection to MongoDB
 var mongo_url = ""
 if (port == 8000) { // dev
   mongo_url = "mongodb://localhost/jordangeorge";
+  var morgan = require("morgan");
   app.use(morgan('dev')); // log with Morgan
   seedDB(); // seed the local mongo database
 } else { // start
@@ -22,7 +23,7 @@ if (port == 8000) { // dev
 }
 mongoose.connect(mongo_url, { useNewUrlParser: true });
 
-// Logging and parsing
+// More app setup
 app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");

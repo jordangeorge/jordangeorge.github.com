@@ -6,20 +6,24 @@ var Post = require("./models/post");
 var Project = require("./models/project");
 var Talk = require("./models/talk");
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res){
+  res.render("index", {title: "", flag: false})
+});
+
+router.get('/blog', function(req, res) {
   Post.find({}, function(err, allPosts) {
     if (err) {
       console.log(err);
     } else {
       allPosts = allPosts.sort(sort_by_date);
-      res.render("blog", {posts: allPosts, title: "", flag: true});
+      res.render("blog", {posts: allPosts, title: "Blog", flag: true});
     }
   });
 });
 
-router.get('/post/:id', function(req, res) {
+router.get('/blog/:id', function(req, res) {
   Post.findById(req.params.id).exec(function(err, foundPost) {
-    if(err) {
+    if (err) {
       console.log(err);
     } else {
       var title = foundPost["title"].toLowerCase();
@@ -28,8 +32,19 @@ router.get('/post/:id', function(req, res) {
   });
 });
 
-router.get('/resume', function(req, res) {
-  res.render("resume", {title: "Resume", flag: false})
+router.get('/archive', function(req, res) {
+  Post.find({}, function(err, allPosts) {
+    if (err) {
+      console.log(err);
+    } else {
+      allPosts = allPosts.sort(sort_by_date);
+      res.render("archive", {posts: allPosts, title: "Archive", flag: false})
+    }
+  });
+});
+
+router.get('/life', function(req, res) {
+  res.render("life", {title: "Life", flag: false})
 });
 
 router.get('/projects', function(req, res) {

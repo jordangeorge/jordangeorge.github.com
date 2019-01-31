@@ -1,5 +1,5 @@
+// for life page
 $(document).ready(function() {
-  // for life page
   var ig_user_id = config.IG_USER_ID;
   var ig_access_token = config.IG_ACCESS_TOKEN;
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
     resolution: 'standard_resolution',
     accessToken: ig_access_token,
     sortBy: 'most-recent',
-    template: '<div class="col-lg-4 col-md-6 col-sm-12 instaimg"> \
+    template: '<div class="instaimg"> \
                   <a href="{{image}}" title="{{caption}}" target="_blank"> \
                       <img src="{{image}}" alt="{{caption}}" class="img-fluid"/> \
                   </a> \

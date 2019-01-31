@@ -35,5 +35,4 @@ var routes = require('./routes');
 app.use("/", routes);
 
 // Listening
-var port_number = server.listen(process.env.PORT || 8000);
-app.listen(port_number);
+app.listen(process.env.PORT);

@@ -1,0 +1,25 @@
+markdown:             kramdown
+highlighter:          rouge
+
+permalink:            /blog/:title
+
+title:                Jordan George
+description:          'Undergraduate software developer'
+baseurl:              ''
+favicon:              /public/images/favicon.ico
+
+author:
+  name:               'Jordan George'
+  url:                jordangeorge.github.io
+
+paginate:             5
+
+plugins:
+  - jekyll-paginate
+
+collections:
+  - projects
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

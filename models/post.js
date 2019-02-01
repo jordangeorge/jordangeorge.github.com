@@ -6,7 +6,7 @@ var postSchema = new Schema({
   title: String,
   content: String,
   published: String,
-  img_name: String,
+  img_name: String
 });
 
 // Export the model

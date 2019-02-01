@@ -5,7 +5,7 @@ var talkSchema = new Schema({
   id: Schema.Types.ObjectId,
   name: String,
   date: String,
-  description: String,
+  description: String
 });
 
 // Export the model

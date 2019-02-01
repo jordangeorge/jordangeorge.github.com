@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 var projectSchema = new Schema({
   id: Schema.Types.ObjectId,
   name: String,
-  description: String,
+  description: String
 });
 
 // Export the model

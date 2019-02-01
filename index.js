@@ -4,29 +4,29 @@ require('dotenv').config()
 // Dependencies
 var express         = require('express'),
     app             = express(),
-    mongoose        = require("mongoose"), // allows communication between mongodb and express
-    bodyParser      = require("body-parser"), // pull information from HTML POST
-    methodOverride  = require("method-override");
-
-var seedDB = require("./seeds");
-var port = process.env.PORT || 8000;
+    mongoose        = require('mongoose'), // allows communication between mongodb and express
+    bodyParser      = require('body-parser'), // pull information from HTML POST
+    methodOverride  = require('method-override'),
+    morgan          = require('morgan');
 
 // Sets the connection to MongoDB
-var mongo_url = process.env.DATABASEURL || "mongodb://localhost/jordangeorge";
+var mongo_url = process.env.DATABASEURL || 'mongodb://localhost/jordangeorge';
 mongoose.connect(mongo_url, { useNewUrlParser: true });
 
 // More app setup
 app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.urlencoded({extended: true}));
-app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
-app.use(methodOverride("_method"));
+app.set('view engine', 'ejs');
+app.use(morgan('dev'));
+app.use(express.static(__dirname + '/public'));
+app.use(methodOverride('_method'));
 
 // Routes
 var routes = require('./routes');
-app.use("/", routes);
+app.use('/', routes);
 
 // Listening
+var port = process.env.PORT || 8000;
 app.listen(port, function () {
-  console.log('App listening on port ' + port + '. Go to http://localhost:' + port + ".")
+  console.log('App listening on port ' + port + '. Go to http://localhost:' + port + '.')
 })

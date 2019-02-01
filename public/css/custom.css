@@ -198,11 +198,20 @@ ul.inline-social-btns li a:visited i {
 	/* flex-wrap: wrap; */
 }
 
-
 .talk {
 
 }
 .no-talks {
 	text-align: center;
 	font-weight: 100;
+}
+
+.error h1 {
+	text-align: center;
+	font-weight: 100;
+	color: #5c5c5c;
+}
+.error a {
+	text-decoration: none;
+	color: #29547b;
 }

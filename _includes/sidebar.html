@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1 class="title">
+        <a href="/" >{{ site.title }}</a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      {% assign links = site.data.links %}
+      {% for link in links %}
+        <a class="sidebar-nav-item {% if page.url contains link.name %}active{% endif %}" href="{{ site.baseurl }}/{{ link.url }}">{{ link.name }}</a>
+      {% endfor %}
+    </nav>
+
+    <ul class="inline-social-btns">
+      {% assign links = site.data.social-media-links %}
+      {% for link in links %}
+        <li>
+          <a href="{{ link.url }}" target="_blank" title="{{ link.name }} link">
+            <i class="{{ link.fa_icon }} fa-2x"></i>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
